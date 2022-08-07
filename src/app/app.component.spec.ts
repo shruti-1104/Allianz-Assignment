@@ -13,13 +13,13 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         HttpClientModule,
-        ScreenComponent,
-        CardComponent,
         IonicModule.forRoot()
       ],
       declarations: [
         AppComponent,
-        SearchbarComponent
+        SearchbarComponent,
+        ScreenComponent,
+        CardComponent
       ],
     }).compileComponents();
   });

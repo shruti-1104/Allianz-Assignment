@@ -23,14 +23,11 @@ describe('ScreenService', () => {
   it('should return country result', () => {
     service.getCountryData().subscribe( result => {
       expect(result).toBeTruthy();
-      expect(result.results).toBeTruthy();
-      expect(result.results.length).toEqual(1);
     })
 
     const req = httpMock.expectOne('https://restcountries.com/v3.1/all');
     expect(req.request.method).toBe('GET');
-    req.flush({
-      results: [
+    req.flush( [
         {
           "name": {
             "common": "India",
@@ -49,9 +46,11 @@ describe('ScreenService', () => {
                 "common": "இந்தியா"
               }
             }
-          }
-      ]
-    })
+          },
+          "capital": "",
+          "subregion": "",
+          "population": ""
+        }])
   });
 });
 

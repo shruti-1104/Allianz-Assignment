@@ -1,3 +1,4 @@
+//Interface to define datatypes for API response
 export interface Country {
     name: Name;
     population: string;

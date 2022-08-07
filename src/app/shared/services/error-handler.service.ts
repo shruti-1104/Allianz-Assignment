@@ -13,6 +13,8 @@ export class ErrorHandlerService implements ErrorHandler {
     } else {
       errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
     }
+
+    window.alert(errorMessage);
     return throwError(errorMessage);
   }
 }

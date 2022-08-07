@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { LoadingControllerService } from 'src/app/shared/services/loading-controller.service';
-import { Country } from '../../services/country';
+import { Country } from '../../domain/country';
 import { ScreenService } from '../../services/screen.service';
 
 @Component({
@@ -24,7 +24,7 @@ export class ScreenComponent implements OnInit {
     this.getCountriesData();
   }
 
-  //get country data
+  //This funtion gets country data from API
   private getCountriesData() {
     const loadingMessage = 'Please Wait...';
     this.loadingController.showLoadingController(loadingMessage);
@@ -43,9 +43,9 @@ export class ScreenComponent implements OnInit {
     );
   }
 
+  //This function filters the list based on the search input
   public filterInput(inputValue) {
     const inputValueParam = inputValue.toLowerCase();
-
     this.countriesDataProcessed = this.countriesData.filter(
       (country) =>
         country.name.common.toLowerCase().indexOf(inputValueParam) > -1

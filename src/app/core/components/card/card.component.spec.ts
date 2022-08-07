@@ -23,11 +23,4 @@ describe('CardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should correctly render the passed @Input value', () => {
-    component.countriesData = '';
-    fixture.detectChanges(); 
-    const compiled = fixture.debugElement.nativeElement; 
-    expect(compiled.querySelector('.country-label').textContent).toBe('India'); 
-  });
-
 });
