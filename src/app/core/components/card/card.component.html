@@ -1,0 +1,14 @@
+<ng-container *ngFor="let country of countriesData">
+  <ion-card class="card-container">
+    <ion-col class="card-content">
+      <ion-label color="primary" class="country-label">{{country.name.common}}</ion-label>
+      <ion-text class="country-text">{{ country.capital + "," }}
+        <span class="country-subregion"> {{ country.subregion }} </span>
+      </ion-text>
+    </ion-col>
+    <ion-col class="card-content">
+      <ion-label class="population-label"> Population</ion-label>
+      <ion-text class="country-text">{{ country.population }}</ion-text>
+    </ion-col>
+  </ion-card>
+</ng-container>

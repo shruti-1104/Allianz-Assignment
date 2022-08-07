@@ -1,0 +1,5 @@
+<ion-content class="screen-container">
+    <app-searchbar [placeholderText]="filterPlaceholder" (filterInputEvent)="filterInput($event)"></app-searchbar>
+    <app-card [countriesData]="countriesDataProcessed"></app-card>
+</ion-content>
+
